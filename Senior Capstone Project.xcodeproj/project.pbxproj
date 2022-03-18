@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A920DA3927D79AC200342EB0 /* MusicLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A920DA3827D79AC200342EB0 /* MusicLibrary.swift */; };
 		A94193EF27AAC2BD0049248E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94193EE27AAC2BD0049248E /* AppDelegate.swift */; };
 		A94193F127AAC2BD0049248E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94193F027AAC2BD0049248E /* SceneDelegate.swift */; };
 		A94193F327AAC2BD0049248E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A94193F227AAC2BD0049248E /* ViewController.swift */; };
 		A94193F627AAC2BD0049248E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94193F427AAC2BD0049248E /* Main.storyboard */; };
 		A94193F827AAC2C10049248E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94193F727AAC2C10049248E /* Assets.xcassets */; };
 		A94193FB27AAC2C10049248E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94193F927AAC2C10049248E /* LaunchScreen.storyboard */; };
+		A9A45A4227D672D900EB7FEE /* MusicSlideButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A45A4127D672D900EB7FEE /* MusicSlideButtons.swift */; };
+		A9A45A4427D674EB00EB7FEE /* MusicSlideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A45A4327D674EB00EB7FEE /* MusicSlideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A920DA3827D79AC200342EB0 /* MusicLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicLibrary.swift; sourceTree = "<group>"; };
+		A920DA3A27D8ECC800342EB0 /* 01 Coffee & Jazz.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "01 Coffee & Jazz.m4a"; sourceTree = "<group>"; };
 		A94193EB27AAC2BD0049248E /* Senior Capstone Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Senior Capstone Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A94193EE27AAC2BD0049248E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A94193F027AAC2BD0049248E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,8 @@
 		A94193F727AAC2C10049248E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A94193FA27AAC2C10049248E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A94193FC27AAC2C10049248E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A9A45A4127D672D900EB7FEE /* MusicSlideButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSlideButtons.swift; sourceTree = "<group>"; };
+		A9A45A4327D674EB00EB7FEE /* MusicSlideViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSlideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,9 +44,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A920DA3B27D8ECEF00342EB0 /* Songs */ = {
+			isa = PBXGroup;
+			children = (
+				A920DA3A27D8ECC800342EB0 /* 01 Coffee & Jazz.m4a */,
+			);
+			path = Songs;
+			sourceTree = "<group>";
+		};
 		A94193E227AAC2BD0049248E = {
 			isa = PBXGroup;
 			children = (
+				A920DA3B27D8ECEF00342EB0 /* Songs */,
 				A94193ED27AAC2BD0049248E /* Senior Capstone Project */,
 				A94193EC27AAC2BD0049248E /* Products */,
 			);
@@ -56,13 +72,16 @@
 		A94193ED27AAC2BD0049248E /* Senior Capstone Project */ = {
 			isa = PBXGroup;
 			children = (
+				A9A45A4127D672D900EB7FEE /* MusicSlideButtons.swift */,
 				A94193EE27AAC2BD0049248E /* AppDelegate.swift */,
 				A94193F027AAC2BD0049248E /* SceneDelegate.swift */,
 				A94193F227AAC2BD0049248E /* ViewController.swift */,
 				A94193F427AAC2BD0049248E /* Main.storyboard */,
+				A9A45A4327D674EB00EB7FEE /* MusicSlideViewController.swift */,
 				A94193F727AAC2C10049248E /* Assets.xcassets */,
 				A94193F927AAC2C10049248E /* LaunchScreen.storyboard */,
 				A94193FC27AAC2C10049248E /* Info.plist */,
+				A920DA3827D79AC200342EB0 /* MusicLibrary.swift */,
 			);
 			path = "Senior Capstone Project";
 			sourceTree = "<group>";
@@ -138,9 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A45A4427D674EB00EB7FEE /* MusicSlideViewController.swift in Sources */,
 				A94193F327AAC2BD0049248E /* ViewController.swift in Sources */,
 				A94193EF27AAC2BD0049248E /* AppDelegate.swift in Sources */,
+				A920DA3927D79AC200342EB0 /* MusicLibrary.swift in Sources */,
 				A94193F127AAC2BD0049248E /* SceneDelegate.swift in Sources */,
+				A9A45A4227D672D900EB7FEE /* MusicSlideButtons.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

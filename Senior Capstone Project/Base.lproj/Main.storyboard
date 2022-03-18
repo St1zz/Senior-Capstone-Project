@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Senior_Capstone_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="BYZ-38-t0r" customClass="ViewController" customModule="Senior_Capstone_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,11 +75,13 @@
                         <color key="backgroundColor" red="0.47875045510781139" green="0.25278814583352438" blue="0.63343552086088395" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                     </view>
+                    <navigationItem key="navigationItem" id="W4Q-6n-g7P"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="fp9-av-n7U" userLabel="Music Tap">
                     <connections>
                         <action selector="musicTapped:" destination="BYZ-38-t0r" id="YcJ-Rm-OKS"/>
+                        <segue destination="S1o-7P-RCo" kind="showDetail" animates="NO" id="Dp7-CL-AZQ"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="qNC-iL-Lgk" userLabel="Timer Tap">
@@ -110,27 +112,54 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--Music Slide View Controller-->
         <scene sceneID="GJH-fe-7WP">
             <objects>
-                <viewController id="S1o-7P-RCo" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="S1o-7P-RCo" customClass="MusicSlideViewController" customModule="Senior_Capstone_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t6t-3J-eYr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mf5-Mc-PZQ">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mf5-Mc-PZQ">
                                 <rect key="frame" x="140" y="610.5" width="134" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="g6b-aY-Gln" appends="YES" id="CSU-Wc-cBb"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Home Icon" translatesAutoresizingMaskIntoConstraints="NO" id="NFs-lc-Fy1">
+                                <rect key="frame" x="20" y="44" width="52" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AN4-rj-Dih" appends="YES" id="rUM-wQ-lCO"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T3C-eS-5p1"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="m3Z-Zr-fXb"/>
+                    <connections>
+                        <outlet property="playButtonImage" destination="Mf5-Mc-PZQ" id="SKK-9n-YFg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIS-E6-2RC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AN4-rj-Dih" userLabel="Home Tap">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" animates="NO" id="vN5-HU-bja"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="g6b-aY-Gln" userLabel="Play Button">
+                    <connections>
+                        <action selector="playButton:" destination="S1o-7P-RCo" id="j5E-ea-9Kz"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="734.78260869565224" y="83.705357142857139"/>
+            <point key="canvasLocation" x="818.84057971014499" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
