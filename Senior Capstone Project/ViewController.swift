@@ -31,8 +31,9 @@ class ViewController: UIViewController {
         print("To Do Tapped")
     }
     @IBAction func timerTapped(_ sender: Any) {
-        print("Timer Tapped")
+        print("Timer tapped")
     }
+    
     
     
 }
