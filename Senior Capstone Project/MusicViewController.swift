@@ -9,12 +9,23 @@ import UIKit
 import AVFoundation
 var audioPlayer: AVAudioPlayer!
 var sound: String?
+var playing = false
+
+let stations = MusicStations()
+let lofiStudy = stations.lofiStudy
 
 class MusicViewController: UIViewController {
+    
+    @IBOutlet weak var playButtonImage: UIImageView!
+    @IBOutlet weak var stationImage: UIImageView!
+    @IBOutlet weak var stationName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        stationName.text = lofiStudy.name
+        stationImage.image = lofiStudy.image
+        
         sound = Bundle.main.path(forResource: "CoffeeJazz", ofType: "m4a")
                 
         if let sound = sound {
@@ -32,9 +43,6 @@ class MusicViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    var playing = false
-    @IBOutlet weak var playButtonImage: UIImageView!
-    
     @IBAction func playButtonTapped(_ sender: Any) {
         if playing == false{
             playButtonImage.image = UIImage(systemName: "pause.circle")
@@ -47,14 +55,4 @@ class MusicViewController: UIViewController {
         playing = !playing
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
