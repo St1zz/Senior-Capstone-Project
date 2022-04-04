@@ -44,8 +44,10 @@ struct MusicStations{
     
     let lofiStudy = Station(name: "Lofi Study", image: #imageLiteral(resourceName: "lofi chill"), songs: [
         
-        Song(name: "Exhale", artist: "No Spirit", fileName: "No Spirit - Exhale", fileType: "mp3"),
+        Song(name: "Exhale", artist: "No Spirit", fileName: "NoSpiritExhale", fileType: "MP3"),
         Song(name: "Dancing In The Dark", artist: "Mondo Loops x Aiguille", fileName: "Mondo Loops x Aiguille - Dancing In The Dark", fileType: "mp3"),
+        Song(name: "CoffeeJazz", artist: "Coffee", fileName: "CoffeeJazz", fileType: "m4a"),
+        Song(name: "Redbone", artist: "LAV8", fileName: "Redbone", fileType: "m4a")
     
     ])
     

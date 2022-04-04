@@ -14,8 +14,8 @@
 		A94193F627AAC2BD0049248E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94193F427AAC2BD0049248E /* Main.storyboard */; };
 		A94193F827AAC2C10049248E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94193F727AAC2C10049248E /* Assets.xcassets */; };
 		A94193FB27AAC2C10049248E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94193F927AAC2C10049248E /* LaunchScreen.storyboard */; };
-		A9993EDA27F626DF008C7BC3 /* Mondo Loops x Aiguille - Dancing In The Dark.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9993ED927F626DF008C7BC3 /* Mondo Loops x Aiguille - Dancing In The Dark.mp3 */; };
-		A9993EDC27F626ED008C7BC3 /* No Spirit - Exhale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9993EDB27F626ED008C7BC3 /* No Spirit - Exhale.mp3 */; };
+		A9A549E127FB481200970CCE /* Redbone.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549E027FB481200970CCE /* Redbone.m4a */; };
+		A9D1041527F7348600B77332 /* NoSpiritExhale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9D1041427F7348500B77332 /* NoSpiritExhale.mp3 */; };
 		A9E39FBF27E4C1DA005FB89B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E39FBE27E4C1DA005FB89B /* AVFoundation.framework */; };
 		A9E3A03527EDF3DD005FB89B /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E3A03427EDF3DD005FB89B /* MusicViewController.swift */; };
 		A9E3A03627EDF7AE005FB89B /* CoffeeJazz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A920DA3A27D8ECC800342EB0 /* CoffeeJazz.m4a */; };
@@ -32,8 +32,8 @@
 		A94193F727AAC2C10049248E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A94193FA27AAC2C10049248E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A94193FC27AAC2C10049248E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A9993ED927F626DF008C7BC3 /* Mondo Loops x Aiguille - Dancing In The Dark.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Mondo Loops x Aiguille - Dancing In The Dark.mp3"; sourceTree = "<group>"; };
-		A9993EDB27F626ED008C7BC3 /* No Spirit - Exhale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "No Spirit - Exhale.mp3"; sourceTree = "<group>"; };
+		A9A549E027FB481200970CCE /* Redbone.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Redbone.m4a; sourceTree = "<group>"; };
+		A9D1041427F7348500B77332 /* NoSpiritExhale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NoSpiritExhale.mp3; sourceTree = "<group>"; };
 		A9E39FBE27E4C1DA005FB89B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A9E3A03427EDF3DD005FB89B /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,9 +53,9 @@
 		A920DA3B27D8ECEF00342EB0 /* Songs */ = {
 			isa = PBXGroup;
 			children = (
-				A9993EDB27F626ED008C7BC3 /* No Spirit - Exhale.mp3 */,
+				A9A549E027FB481200970CCE /* Redbone.m4a */,
+				A9D1041427F7348500B77332 /* NoSpiritExhale.mp3 */,
 				A920DA3A27D8ECC800342EB0 /* CoffeeJazz.m4a */,
-				A9993ED927F626DF008C7BC3 /* Mondo Loops x Aiguille - Dancing In The Dark.mp3 */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -160,12 +160,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9993EDC27F626ED008C7BC3 /* No Spirit - Exhale.mp3 in Resources */,
+				A9A549E127FB481200970CCE /* Redbone.m4a in Resources */,
 				A94193FB27AAC2C10049248E /* LaunchScreen.storyboard in Resources */,
 				A9E3A03627EDF7AE005FB89B /* CoffeeJazz.m4a in Resources */,
 				A94193F827AAC2C10049248E /* Assets.xcassets in Resources */,
-				A9993EDA27F626DF008C7BC3 /* Mondo Loops x Aiguille - Dancing In The Dark.mp3 in Resources */,
 				A94193F627AAC2BD0049248E /* Main.storyboard in Resources */,
+				A9D1041527F7348600B77332 /* NoSpiritExhale.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

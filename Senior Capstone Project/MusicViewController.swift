@@ -26,13 +26,20 @@ class MusicViewController: UIViewController {
         stationName.text = lofiStudy.name
         stationImage.image = lofiStudy.image
         
-        sound = Bundle.main.path(forResource: "CoffeeJazz", ofType: "m4a")
-                
+        let fileName = lofiStudy.songs[0].fileName
+        let fileType = lofiStudy.songs[0].fileType
+        
+        print(fileName)
+        print(fileType)
+        
+        sound = Bundle.main.path(forResource: fileName, ofType: fileType)
+        
         if let sound = sound {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound))
             }
             catch{
+                print("Error Setting AudioPlayer")
                 print(error)
             }
         }
