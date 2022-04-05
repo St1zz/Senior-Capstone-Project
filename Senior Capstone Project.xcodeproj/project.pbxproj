@@ -15,7 +15,13 @@
 		A94193F827AAC2C10049248E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A94193F727AAC2C10049248E /* Assets.xcassets */; };
 		A94193FB27AAC2C10049248E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A94193F927AAC2C10049248E /* LaunchScreen.storyboard */; };
 		A9A549E127FB481200970CCE /* Redbone.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549E027FB481200970CCE /* Redbone.m4a */; };
-		A9D1041527F7348600B77332 /* NoSpiritExhale.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A9D1041427F7348500B77332 /* NoSpiritExhale.mp3 */; };
+		A9A549E427FB4AD600970CCE /* Mondo Loops x Aiguille - Dancing In The Dark.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549E227FB4AD500970CCE /* Mondo Loops x Aiguille - Dancing In The Dark.m4a */; };
+		A9A549E527FB4AD600970CCE /* No Spirit - Exhale.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549E327FB4AD600970CCE /* No Spirit - Exhale.m4a */; };
+		A9A549E727FC6FA800970CCE /* LVDS - Blessed.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549E627FC6FA800970CCE /* LVDS - Blessed.m4a */; };
+		A9A549E927FC70A600970CCE /* holiday party - Mr.Woox.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549E827FC70A600970CCE /* holiday party - Mr.Woox.m4a */; };
+		A9A549EB27FC72BF00970CCE /* Road Is Mine.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549EA27FC72BF00970CCE /* Road Is Mine.m4a */; };
+		A9A549ED27FC734000970CCE /* G R I Z - Lonely in a Crowd.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549EC27FC734000970CCE /* G R I Z - Lonely in a Crowd.m4a */; };
+		A9A549EF27FC738300970CCE /* Phoenix.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549EE27FC738300970CCE /* Phoenix.m4a */; };
 		A9E39FBF27E4C1DA005FB89B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E39FBE27E4C1DA005FB89B /* AVFoundation.framework */; };
 		A9E3A03527EDF3DD005FB89B /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E3A03427EDF3DD005FB89B /* MusicViewController.swift */; };
 		A9E3A03627EDF7AE005FB89B /* CoffeeJazz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A920DA3A27D8ECC800342EB0 /* CoffeeJazz.m4a */; };
@@ -33,7 +39,13 @@
 		A94193FA27AAC2C10049248E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A94193FC27AAC2C10049248E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A9A549E027FB481200970CCE /* Redbone.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Redbone.m4a; sourceTree = "<group>"; };
-		A9D1041427F7348500B77332 /* NoSpiritExhale.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NoSpiritExhale.mp3; sourceTree = "<group>"; };
+		A9A549E227FB4AD500970CCE /* Mondo Loops x Aiguille - Dancing In The Dark.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Mondo Loops x Aiguille - Dancing In The Dark.m4a"; sourceTree = "<group>"; };
+		A9A549E327FB4AD600970CCE /* No Spirit - Exhale.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "No Spirit - Exhale.m4a"; sourceTree = "<group>"; };
+		A9A549E627FC6FA800970CCE /* LVDS - Blessed.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LVDS - Blessed.m4a"; sourceTree = "<group>"; };
+		A9A549E827FC70A600970CCE /* holiday party - Mr.Woox.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "holiday party - Mr.Woox.m4a"; sourceTree = "<group>"; };
+		A9A549EA27FC72BF00970CCE /* Road Is Mine.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Road Is Mine.m4a"; sourceTree = "<group>"; };
+		A9A549EC27FC734000970CCE /* G R I Z - Lonely in a Crowd.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "G R I Z - Lonely in a Crowd.m4a"; sourceTree = "<group>"; };
+		A9A549EE27FC738300970CCE /* Phoenix.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phoenix.m4a; sourceTree = "<group>"; };
 		A9E39FBE27E4C1DA005FB89B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A9E3A03427EDF3DD005FB89B /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,9 +65,15 @@
 		A920DA3B27D8ECEF00342EB0 /* Songs */ = {
 			isa = PBXGroup;
 			children = (
+				A9A549EE27FC738300970CCE /* Phoenix.m4a */,
+				A9A549EC27FC734000970CCE /* G R I Z - Lonely in a Crowd.m4a */,
+				A9A549EA27FC72BF00970CCE /* Road Is Mine.m4a */,
+				A9A549E827FC70A600970CCE /* holiday party - Mr.Woox.m4a */,
 				A9A549E027FB481200970CCE /* Redbone.m4a */,
-				A9D1041427F7348500B77332 /* NoSpiritExhale.mp3 */,
 				A920DA3A27D8ECC800342EB0 /* CoffeeJazz.m4a */,
+				A9A549E227FB4AD500970CCE /* Mondo Loops x Aiguille - Dancing In The Dark.m4a */,
+				A9A549E327FB4AD600970CCE /* No Spirit - Exhale.m4a */,
+				A9A549E627FC6FA800970CCE /* LVDS - Blessed.m4a */,
 			);
 			path = Songs;
 			sourceTree = "<group>";
@@ -161,11 +179,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A9A549E127FB481200970CCE /* Redbone.m4a in Resources */,
+				A9A549E527FB4AD600970CCE /* No Spirit - Exhale.m4a in Resources */,
+				A9A549EF27FC738300970CCE /* Phoenix.m4a in Resources */,
+				A9A549ED27FC734000970CCE /* G R I Z - Lonely in a Crowd.m4a in Resources */,
+				A9A549E727FC6FA800970CCE /* LVDS - Blessed.m4a in Resources */,
+				A9A549E927FC70A600970CCE /* holiday party - Mr.Woox.m4a in Resources */,
+				A9A549E427FB4AD600970CCE /* Mondo Loops x Aiguille - Dancing In The Dark.m4a in Resources */,
+				A9A549EB27FC72BF00970CCE /* Road Is Mine.m4a in Resources */,
 				A94193FB27AAC2C10049248E /* LaunchScreen.storyboard in Resources */,
 				A9E3A03627EDF7AE005FB89B /* CoffeeJazz.m4a in Resources */,
 				A94193F827AAC2C10049248E /* Assets.xcassets in Resources */,
 				A94193F627AAC2BD0049248E /* Main.storyboard in Resources */,
-				A9D1041527F7348600B77332 /* NoSpiritExhale.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -40,15 +40,28 @@ class Station{
     
 }
 
-struct MusicStations{
+let musicStations = [
     
-    let lofiStudy = Station(name: "Lofi Study", image: #imageLiteral(resourceName: "lofi chill"), songs: [
-        
-        Song(name: "Exhale", artist: "No Spirit", fileName: "NoSpiritExhale", fileType: "MP3"),
-        Song(name: "Dancing In The Dark", artist: "Mondo Loops x Aiguille", fileName: "Mondo Loops x Aiguille - Dancing In The Dark", fileType: "mp3"),
-        Song(name: "CoffeeJazz", artist: "Coffee", fileName: "CoffeeJazz", fileType: "m4a"),
+    Station(name: "Lofi Study", image: #imageLiteral(resourceName: "lofi chill"), songs: [
+            
+        Song(name: "Exhale", artist: "No Spirit", fileName: "No Spirit - Exhale", fileType: "m4a"),
+        Song(name: "Dancing In The Dark", artist: "Mondo Loops x Aiguille", fileName: "Mondo Loops x Aiguille - Dancing In The Dark", fileType: "m4a"),
         Song(name: "Redbone", artist: "LAV8", fileName: "Redbone", fileType: "m4a")
+    ]),
     
+    Station(name: "Lofi Jazz", image: #imageLiteral(resourceName: "LofiJazz"), songs:[
+        
+        Song(name: "Blessed", artist: "LVDS", fileName: "LVDS - Blessed", fileType: "m4a"),
+        Song(name: "CoffeeJazz", artist: "Coffee", fileName: "CoffeeJazz", fileType: "m4a"),
+        Song(name: "holiday party", artist: "Mr.Woox", fileName: "holiday party - Mr.Woox", fileType: "m4a"),
+    ]),
+        
+    Station(name: "Chill Drive", image: #imageLiteral(resourceName: "lofi Car"), songs:[
+            
+        Song(name: "Road Is Mine", artist: "Project AER", fileName: "Road Is Mine", fileType: "m4a"),
+            
+        Song(name: "Lonely in a Crowd", artist: "G R I Z", fileName: "G R I Z - Lonely in a Crowd", fileType: "m4a"),
+            
+        Song(name: "Phoenix", artist: "JazzyCal, Purrple Cat", fileName: "Phoenix", fileType: "m4a"),
     ])
-    
-}
+]

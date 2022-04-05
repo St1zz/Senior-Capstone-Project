@@ -134,6 +134,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9oe-hG-Msn" appends="YES" id="4nJ-b0-Zrz"/>
+                                </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Home Icon" translatesAutoresizingMaskIntoConstraints="NO" id="NFs-lc-Fy1">
                                 <rect key="frame" x="20" y="44" width="52" height="52"/>
@@ -141,9 +144,14 @@
                                 <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Fh-Y9-3tl" userLabel="Station Image">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Fh-Y9-3tl" userLabel="Station Image">
                                 <rect key="frame" x="28" y="181" width="358" height="358"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Qar-fc-jVR" appends="YES" id="xjE-Eo-xKN"/>
+                                    <outletCollection property="gestureRecognizers" destination="S5K-bg-6v3" appends="YES" id="dSs-Bg-HXT"/>
+                                </connections>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music Station" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d8V-mi-cMa">
                                 <rect key="frame" x="28" y="122" width="358" height="51"/>
@@ -171,6 +179,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UqJ-b5-saj" appends="YES" id="5mm-9g-XMO"/>
+                                </connections>
                             </imageView>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-NZ-QQM">
                                 <rect key="frame" x="26" y="620" width="362" height="30"/>
@@ -200,7 +211,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="m3Z-Zr-fXb"/>
                     <connections>
+                        <outlet property="artistLabel" destination="1de-uc-5ui" id="H4z-3L-Phs"/>
                         <outlet property="playButtonImage" destination="Mf5-Mc-PZQ" id="FrY-eK-T8Y"/>
+                        <outlet property="songNameLabel" destination="cj3-Gv-yvs" id="wbr-vn-WJT"/>
                         <outlet property="stationImage" destination="1Fh-Y9-3tl" id="aWy-g5-Ykh"/>
                         <outlet property="stationName" destination="d8V-mi-cMa" id="Rhu-eE-kpN"/>
                     </connections>
@@ -212,6 +225,26 @@
                         <outlet property="delegate" destination="S1o-7P-RCo" id="AwD-j2-e76"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="UqJ-b5-saj" userLabel="Next Button">
+                    <connections>
+                        <action selector="nextButtonTapped:" destination="S1o-7P-RCo" id="Rzk-N2-Jmv"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="9oe-hG-Msn" userLabel="Last Button">
+                    <connections>
+                        <action selector="lastButtonTapped:" destination="S1o-7P-RCo" id="qls-fg-BLR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Qar-fc-jVR" userLabel="Right Swipe">
+                    <connections>
+                        <action selector="rightSwipe:" destination="S1o-7P-RCo" id="dgo-GW-5wL"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="S5K-bg-6v3" userLabel="Left Swipe">
+                    <connections>
+                        <action selector="leftSwipe:" destination="S1o-7P-RCo" id="QOY-Ap-gM3"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="818.84057971014499" y="83.705357142857139"/>
         </scene>
