@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -86,7 +86,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="qNC-iL-Lgk" userLabel="Timer Tap">
                     <connections>
-                        <action selector="timerTapped:" destination="BYZ-38-t0r" id="rKZ-0S-XVU"/>
+                        <action selector="timerTapped:" destination="BYZ-38-t0r" id="VJp-AE-KmH"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="5T6-Mm-uba" userLabel="ToDo Tap">
@@ -101,7 +101,7 @@
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Zcf-S3-KbG" userLabel="Calendar Tap">
                     <connections>
-                        <action selector="calendarTapped:" destination="BYZ-38-t0r" id="daA-Us-bUJ"/>
+                        <action selector="calendarTapped:" destination="BYZ-38-t0r" id="ay8-Yq-i32"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="FYZ-Bg-k4B" userLabel="Home Tap">
@@ -112,21 +112,30 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
-        <!--Music Slide View Controller-->
+        <!--Music View Controller-->
         <scene sceneID="GJH-fe-7WP">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="S1o-7P-RCo" customClass="MusicSlideViewController" customModule="Senior_Capstone_Project" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="S1o-7P-RCo" customClass="MusicViewController" customModule="Senior_Capstone_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t6t-3J-eYr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" contentMode="scaleAspectFit" fixedFrame="YES" image="play.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Mf5-Mc-PZQ">
-                                <rect key="frame" x="140" y="610.5" width="134" height="141"/>
+                                <rect key="frame" x="140" y="686.5" width="134" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="g6b-aY-Gln" appends="YES" id="CSU-Wc-cBb"/>
+                                    <outletCollection property="gestureRecognizers" destination="fgA-00-HOr" appends="YES" id="Qdb-AJ-utq"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" image="BackIcon" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4E4-ZR-PUc">
+                                <rect key="frame" x="47" y="730" width="57" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9oe-hG-Msn" appends="YES" id="4nJ-b0-Zrz"/>
                                 </connections>
                             </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Home Icon" translatesAutoresizingMaskIntoConstraints="NO" id="NFs-lc-Fy1">
@@ -134,40 +143,120 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
                                 <gestureRecognizers/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Fh-Y9-3tl" userLabel="Station Image">
+                                <rect key="frame" x="28" y="181" width="358" height="358"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="AN4-rj-Dih" appends="YES" id="rUM-wQ-lCO"/>
+                                    <outletCollection property="gestureRecognizers" destination="Qar-fc-jVR" appends="YES" id="xjE-Eo-xKN"/>
+                                    <outletCollection property="gestureRecognizers" destination="S5K-bg-6v3" appends="YES" id="dSs-Bg-HXT"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music Station" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d8V-mi-cMa">
+                                <rect key="frame" x="28" y="122" width="358" height="51"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="34"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Song Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cj3-Gv-yvs">
+                                <rect key="frame" x="36" y="547" width="350" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-BoldItalic" family="Menlo" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1de-uc-5ui">
+                                <rect key="frame" x="32" y="581" width="350" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Menlo-Italic" family="Menlo" pointSize="25"/>
+                                <color key="textColor" red="0.90837890880000005" green="0.64399732649999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" image="SkipIcon" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wia-vp-bAz">
+                                <rect key="frame" x="305" y="730" width="57" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="UqJ-b5-saj" appends="YES" id="5mm-9g-XMO"/>
+                                </connections>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-NZ-QQM">
+                                <rect key="frame" x="26" y="620" width="362" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="minimumTrackTintColor" red="0.90837890881130412" green="0.64399732653792308" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="0.52342520254484182" green="0.39126412222088397" blue="0.67614329944957385" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PX9-XJ-A2m">
+                                <rect key="frame" x="28" y="657" width="36" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8SK-Pt-eGW">
+                                <rect key="frame" x="350" y="657" width="36" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="T3C-eS-5p1"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="m3Z-Zr-fXb"/>
                     <connections>
-                        <outlet property="playButtonImage" destination="Mf5-Mc-PZQ" id="SKK-9n-YFg"/>
+                        <outlet property="artistLabel" destination="1de-uc-5ui" id="H4z-3L-Phs"/>
+                        <outlet property="playButtonImage" destination="Mf5-Mc-PZQ" id="FrY-eK-T8Y"/>
+                        <outlet property="songNameLabel" destination="cj3-Gv-yvs" id="wbr-vn-WJT"/>
+                        <outlet property="stationImage" destination="1Fh-Y9-3tl" id="aWy-g5-Ykh"/>
+                        <outlet property="stationName" destination="d8V-mi-cMa" id="Rhu-eE-kpN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cIS-E6-2RC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="AN4-rj-Dih" userLabel="Home Tap">
+                <tapGestureRecognizer id="fgA-00-HOr" userLabel="Play Button">
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="showDetail" animates="NO" id="vN5-HU-bja"/>
+                        <action selector="playButtonTapped:" destination="S1o-7P-RCo" id="9hc-br-DOx"/>
+                        <outlet property="delegate" destination="S1o-7P-RCo" id="AwD-j2-e76"/>
                     </connections>
                 </tapGestureRecognizer>
-                <tapGestureRecognizer id="g6b-aY-Gln" userLabel="Play Button">
+                <tapGestureRecognizer id="UqJ-b5-saj" userLabel="Next Button">
                     <connections>
-                        <action selector="playButton:" destination="S1o-7P-RCo" id="j5E-ea-9Kz"/>
+                        <action selector="nextButtonTapped:" destination="S1o-7P-RCo" id="Rzk-N2-Jmv"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="9oe-hG-Msn" userLabel="Last Button">
+                    <connections>
+                        <action selector="lastButtonTapped:" destination="S1o-7P-RCo" id="qls-fg-BLR"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Qar-fc-jVR" userLabel="Right Swipe">
+                    <connections>
+                        <action selector="rightSwipe:" destination="S1o-7P-RCo" id="dgo-GW-5wL"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="S5K-bg-6v3" userLabel="Left Swipe">
+                    <connections>
+                        <action selector="leftSwipe:" destination="S1o-7P-RCo" id="QOY-Ap-gM3"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="818.84057971014499" y="83.705357142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="BackIcon" width="151" height="165"/>
         <image name="Calendar Icon" width="1920" height="1920"/>
         <image name="ChecklistIcon" width="1920" height="1920"/>
         <image name="Home Icon" width="1920" height="1920"/>
         <image name="Moon Stars Icon" width="1920" height="1920"/>
         <image name="MusicIcon" width="1920" height="1920"/>
+        <image name="SkipIcon" width="151" height="165"/>
         <image name="Timer Icon" width="1920" height="1920"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemPurpleColor">
