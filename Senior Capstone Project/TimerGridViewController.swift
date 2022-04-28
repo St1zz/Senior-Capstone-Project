@@ -10,7 +10,8 @@ import UIKit
 class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet var timerCollection: UICollectionView!
-    let dataSource: [String] = ["Red", "Blue", "Green", "Yellow"]
+    
+    let dataSource: [String] = ["Red", "Blue", "Green", "Yellow", "White", "Black", "Orange", "Pink", "Purple", "Magenta", "Grey", "Lime", "Cyan", "Turqoise", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +25,14 @@ class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         var cell = UICollectionViewCell()
         
         if let timerCell =  collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? TimerCell {
-            print("timer cell here")
+           
             timerCell.configure(with: dataSource[indexPath.row])
             cell = timerCell
+            
         }
         
         return cell

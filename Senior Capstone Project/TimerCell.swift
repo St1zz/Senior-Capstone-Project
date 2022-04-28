@@ -9,9 +9,7 @@ import UIKit
 
 class TimerCell: UICollectionViewCell {
     
-    @IBOutlet private var cellTitle: UILabel!
-    @IBOutlet private var cellTime: UILabel!
-    @IBOutlet private var cellCircle: UIImageView!
+    @IBOutlet var cellTitle: UILabel!
     
     func configure(with cellName: String){
         
