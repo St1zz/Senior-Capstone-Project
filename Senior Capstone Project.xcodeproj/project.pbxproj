@@ -22,6 +22,8 @@
 		A9A549EB27FC72BF00970CCE /* Road Is Mine.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549EA27FC72BF00970CCE /* Road Is Mine.m4a */; };
 		A9A549ED27FC734000970CCE /* G R I Z - Lonely in a Crowd.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549EC27FC734000970CCE /* G R I Z - Lonely in a Crowd.m4a */; };
 		A9A549EF27FC738300970CCE /* Phoenix.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549EE27FC738300970CCE /* Phoenix.m4a */; };
+		A9A549F32818243000970CCE /* TimerGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A549F22818243000970CCE /* TimerGridViewController.swift */; };
+		A9A549F52818296800970CCE /* TimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A549F42818296800970CCE /* TimerCell.swift */; };
 		A9E39FBF27E4C1DA005FB89B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E39FBE27E4C1DA005FB89B /* AVFoundation.framework */; };
 		A9E3A03527EDF3DD005FB89B /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E3A03427EDF3DD005FB89B /* MusicViewController.swift */; };
 		A9E3A03627EDF7AE005FB89B /* CoffeeJazz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A920DA3A27D8ECC800342EB0 /* CoffeeJazz.m4a */; };
@@ -46,6 +48,8 @@
 		A9A549EA27FC72BF00970CCE /* Road Is Mine.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Road Is Mine.m4a"; sourceTree = "<group>"; };
 		A9A549EC27FC734000970CCE /* G R I Z - Lonely in a Crowd.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = "G R I Z - Lonely in a Crowd.m4a"; sourceTree = "<group>"; };
 		A9A549EE27FC738300970CCE /* Phoenix.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phoenix.m4a; sourceTree = "<group>"; };
+		A9A549F22818243000970CCE /* TimerGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGridViewController.swift; sourceTree = "<group>"; };
+		A9A549F42818296800970CCE /* TimerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
 		A9E39FBE27E4C1DA005FB89B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A9E3A03427EDF3DD005FB89B /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +112,8 @@
 				A94193FC27AAC2C10049248E /* Info.plist */,
 				A920DA3827D79AC200342EB0 /* MusicLibrary.swift */,
 				A9E3A03427EDF3DD005FB89B /* MusicViewController.swift */,
+				A9A549F22818243000970CCE /* TimerGridViewController.swift */,
+				A9A549F42818296800970CCE /* TimerCell.swift */,
 			);
 			path = "Senior Capstone Project";
 			sourceTree = "<group>";
@@ -200,10 +206,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9A549F52818296800970CCE /* TimerCell.swift in Sources */,
 				A94193F327AAC2BD0049248E /* ViewController.swift in Sources */,
 				A9E3A03527EDF3DD005FB89B /* MusicViewController.swift in Sources */,
 				A94193EF27AAC2BD0049248E /* AppDelegate.swift in Sources */,
 				A920DA3927D79AC200342EB0 /* MusicLibrary.swift in Sources */,
+				A9A549F32818243000970CCE /* TimerGridViewController.swift in Sources */,
 				A94193F127AAC2BD0049248E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
