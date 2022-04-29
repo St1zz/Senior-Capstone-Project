@@ -11,7 +11,7 @@ class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICol
     
     @IBOutlet var timerCollection: UICollectionView!
     
-    let dataSource: [String] = ["Red", "Blue", "Green", "Yellow", "White", "Black", "Orange", "Pink", "Purple", "Magenta", "Grey", "Lime", "Cyan", "Turqoise", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue"]
+    var elements: [String] = ["Red", "Blue", "Green", "Yellow", "White", "Black", "Orange", "Pink", "Purple", "Magenta", "Grey", "Lime", "Cyan", "Turqoise", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,7 @@ class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.count
+        return elements.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -30,13 +30,21 @@ class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICol
         
         if let timerCell =  collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? TimerCell {
            
-            timerCell.configure(with: dataSource[indexPath.row])
+            timerCell.configure(with: elements[indexPath.row])
             cell = timerCell
             
         }
         
         return cell
     }
+    
+    @IBAction func addTapped(_ sender: Any) {
+       let newTimer = "Rainbow"
+        elements.insert(newTimer, at: 0)
+        let indexPath = IndexPath(row: 0, section:0)
+        timerCollection.insertItems(at: [indexPath])
+    }
+
     
 }
 /*
