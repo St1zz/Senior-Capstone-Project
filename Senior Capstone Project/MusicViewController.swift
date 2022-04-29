@@ -14,6 +14,7 @@ var playing = false
 var currentStation = musicStations[0]
 var stationNum = 0
 var currentSongNum = 0
+var songswitched = false
 
 class MusicViewController: UIViewController {
     
@@ -22,10 +23,14 @@ class MusicViewController: UIViewController {
     @IBOutlet weak var stationName: UILabel!
     @IBOutlet weak var songNameLabel: UILabel!
     @IBOutlet weak var artistLabel: UILabel!
-
+    @IBOutlet weak var musicSlider: UISlider!
+    @IBOutlet weak var progressLabel: UILabel!
+    @IBOutlet weak var lengthLabel: UILabel!
+    
     // Change Song
     func ChangeSong(goNext:Bool){
         let songCount = currentStation.songs.count
+        songswitched = false
         
         if goNext == true{
             if currentSongNum == songCount - 1{
@@ -41,7 +46,7 @@ class MusicViewController: UIViewController {
                 currentSongNum -= 1
             }
         }
-       print(currentSongNum)
+   
         let nextSong = currentStation.songs[currentSongNum]
         let fileName = nextSong.fileName
         let fileType = nextSong.fileType
@@ -55,9 +60,11 @@ class MusicViewController: UIViewController {
             do {
                 audioPlayer.stop()
                 audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound))
-                
+                lengthLabel.text = getTime(timeInt: audioPlayer.duration)
                 if playing == true{
                     audioPlayer.play()
+                    musicSlider.value = 0
+                    musicSlider.maximumValue = Float(audioPlayer.duration)
                 }
                 
             }
@@ -76,7 +83,7 @@ class MusicViewController: UIViewController {
     func SetStation(goNext: Bool?){
         
         if let goNext = goNext{
-            print("nextin")
+          
             let stationCount = musicStations.count
             
             if goNext == true{
@@ -118,9 +125,12 @@ class MusicViewController: UIViewController {
         if let sound = sound {
             do {
                 audioPlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: sound))
+                lengthLabel.text = getTime(timeInt: audioPlayer.duration)
                 
                 if playing == true{
                     audioPlayer.play()
+                    musicSlider.value = 0
+                    musicSlider.maximumValue = Float(audioPlayer.duration)
                 }
             }
             catch{
@@ -134,18 +144,51 @@ class MusicViewController: UIViewController {
         
     }
     
+    func getTime(timeInt: TimeInterval) -> String{
+        
+        let mins = timeInt/60
+        let secs = timeInt.truncatingRemainder(dividingBy: 60)
+        let timeFormatter = NumberFormatter()
+        timeFormatter.minimumIntegerDigits = 2
+        timeFormatter.minimumFractionDigits = 0
+        timeFormatter.roundingMode = .down
+        
+        guard let minsString = timeFormatter.string(from: NSNumber(value: mins)), let secString = timeFormatter.string(from: NSNumber(value: secs))
+        else{
+            return "00:00"
+        }
+        
+        return "\(minsString):\(secString)"
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         SetStation(goNext: nil)
         
+        let _ = Timer.scheduledTimer(timeInterval: 0.0001, target: self, selector: #selector(UpdateSlider), userInfo:nil, repeats:true)
+
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func UpdateSlider(){
+        musicSlider.value = Float(audioPlayer.currentTime)
+        let timeLeft = audioPlayer.currentTime
+        progressLabel.text = getTime(timeInt: timeLeft)
+       
+        if audioPlayer.currentTime >
+            audioPlayer.duration - 0.1 && songswitched == false {
+            songswitched = true
+            ChangeSong(goNext: true)
+        }
     }
     
     @IBAction func playButtonTapped(_ sender: Any) {
         if playing == false{
             playButtonImage.image = UIImage(systemName: "pause.circle")
             audioPlayer.play()
+            musicSlider.value = 0
+            musicSlider.maximumValue = Float(audioPlayer.duration)
         }
         else{
             playButtonImage.image = UIImage(systemName: "play.circle")
@@ -163,13 +206,21 @@ class MusicViewController: UIViewController {
     }
     
     @IBAction func rightSwipe(_ sender: Any) {
-        print("Last Station")
         SetStation(goNext: false)
     }
     
     @IBAction func leftSwipe(_ sender: Any) {
-        print("Next Station")
         SetStation(goNext: true)
     }
+    
+    @IBAction func musicSliderMove(_ sender: Any) {
+        
+        audioPlayer.stop()
+        audioPlayer.currentTime = TimeInterval(musicSlider.value)
+        audioPlayer.prepareToPlay()
+        audioPlayer.play()
+        
+    }
+    
     
 }
