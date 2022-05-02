@@ -7,17 +7,20 @@
 
 import UIKit
 
+var elements: [String] = ["Red", "Blue", "Green", "Yellow", "White", "Black", "Orange", "Pink", "Purple", "Magenta", "Grey", "Lime", "Cyan", "Turqoise", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue"]
+
+var timerGrid:UICollectionView?
+
 class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
     @IBOutlet var timerCollection: UICollectionView!
-    
-    var elements: [String] = ["Red", "Blue", "Green", "Yellow", "White", "Black", "Orange", "Pink", "Purple", "Magenta", "Grey", "Lime", "Cyan", "Turqoise", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         timerCollection.delegate = self
         timerCollection.dataSource = self
+        timerGrid = timerCollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -37,14 +40,6 @@ class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICol
         
         return cell
     }
-    
-    @IBAction func addTapped(_ sender: Any) {
-       let newTimer = "Rainbow"
-        elements.insert(newTimer, at: 0)
-        let indexPath = IndexPath(row: 0, section:0)
-        timerCollection.insertItems(at: [indexPath])
-    }
-
     
 }
 /*
