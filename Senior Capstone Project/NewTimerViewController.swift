@@ -13,7 +13,7 @@ var newTimerColor:UIColor = .red
 
 class NewTimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let colors:[UIColor] = [.red, .orange, .yellow, .green, .blue, .purple, .black, .white]
+    let colors:[UIColor] = [.red, .orange, .yellow, .green, .blue, .purple, .magenta, .black, .brown, .white]
 
     @IBOutlet var colorPickerCollection: UICollectionView!
     @IBOutlet var timerDuration: UIDatePicker!

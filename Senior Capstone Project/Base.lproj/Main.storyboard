@@ -100,6 +100,28 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="83.705357142857139"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="uB4-O0-ldO">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="OjE-fc-2Fa" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k2A-tk-37g">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmptyCircle" translatesAutoresizingMaskIntoConstraints="NO" id="k0A-Hd-PRP">
+                                <rect key="frame" x="39" y="194" width="336" height="336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J80-BH-uMj"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WNW-NR-Jik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639.13043478260875" y="780.80357142857144"/>
+        </scene>
         <!--Timer Grid View Controller-->
         <scene sceneID="H2H-ax-JeX">
             <objects>
@@ -123,7 +145,7 @@
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Set-yk-ZUr">
                                 <rect key="frame" x="0.0" y="104" width="414" height="792"/>
-                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.28480398418098096" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="792" id="RZq-1u-UKv"/>
                                     <constraint firstAttribute="width" constant="414" id="nI7-ms-0OP"/>
@@ -170,6 +192,15 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3uU-YZ-XrU">
+                                                    <rect key="frame" x="0.0" y="0.0" width="190" height="219"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain"/>
+                                                    <connections>
+                                                        <segue destination="OjE-fc-2Fa" kind="showDetail" id="KPs-tJ-eCd"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="Mdx-w0-5Ur" secondAttribute="trailing" constant="39" id="DIA-fw-xl1"/>
@@ -259,7 +290,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="XdY-dw-1oE">
                                     <size key="itemSize" width="48" height="48"/>
-                                    <size key="estimatedItemSize" width="50" height="50"/>
+                                    <size key="estimatedItemSize" width="48" height="48"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -281,20 +312,13 @@
                                                         <action selector="buttonClicked:" destination="UnQ-Gf-b4l" eventType="touchUpInside" id="kpi-uB-1wV"/>
                                                     </connections>
                                                 </button>
-                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DIP-B3-woI">
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="DIP-B3-woI">
                                                     <rect key="frame" x="0.0" y="0.5" width="48" height="47"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemRedColor"/>
-                                            <constraints>
-                                                <constraint firstItem="DIP-B3-woI" firstAttribute="top" secondItem="VvL-IQ-4ob" secondAttribute="top" id="2zM-Zn-2bI"/>
-                                                <constraint firstAttribute="trailing" secondItem="DIP-B3-woI" secondAttribute="trailing" id="NBz-Ek-ThE"/>
-                                                <constraint firstItem="DIP-B3-woI" firstAttribute="width" secondItem="VvL-IQ-4ob" secondAttribute="width" id="Wb4-P3-huF"/>
-                                                <constraint firstItem="DIP-B3-woI" firstAttribute="leading" secondItem="VvL-IQ-4ob" secondAttribute="leading" id="Whi-Cf-cs1"/>
-                                                <constraint firstItem="DIP-B3-woI" firstAttribute="height" secondItem="VvL-IQ-4ob" secondAttribute="height" id="cv2-IL-sW1"/>
-                                                <constraint firstAttribute="bottom" secondItem="DIP-B3-woI" secondAttribute="bottom" id="vBS-Mx-Cqz"/>
-                                            </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="48" height="48"/>
                                         <connections>
@@ -365,7 +389,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="821.73913043478262" y="780.80357142857144"/>
+            <point key="canvasLocation" x="670" y="781"/>
         </scene>
         <!--Music View Controller-->
         <scene sceneID="GJH-fe-7WP">
@@ -520,7 +544,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="RJb-rZ-EBZ"/>
-        <segue reference="9sr-aT-E3W"/>
+        <segue reference="7JV-Fx-u97"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AddButton" width="1920" height="1920"/>
