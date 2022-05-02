@@ -56,8 +56,8 @@ class NewTimerViewController: UIViewController, UICollectionViewDelegate, UIColl
         newTimerDuration = timerDuration.countDownDuration
         newTimerColor = selectedColor
         
-        let newTimer = "Rainbow"
-         elements.insert(newTimer, at: 0)
+        let newTimerCell = newTimer(name: newTimerName, color: newTimerColor, duration: newTimerDuration)
+         timers.insert(newTimerCell, at: 0)
          let indexPath = IndexPath(row: 0, section:0)
          timerGrid!.insertItems(at: [indexPath])
         

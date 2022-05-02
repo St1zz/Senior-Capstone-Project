@@ -185,6 +185,8 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
+                                            <outlet property="cellCircle" destination="xKg-Lr-j2g" id="4QN-2B-xMj"/>
+                                            <outlet property="cellDuration" destination="Mdx-w0-5Ur" id="MRc-Bv-46J"/>
                                             <outlet property="cellTitle" destination="R3V-ec-WJZ" id="0Vw-lV-VAT"/>
                                         </connections>
                                     </collectionViewCell>

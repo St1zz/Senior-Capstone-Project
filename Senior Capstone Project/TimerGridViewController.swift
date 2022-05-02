@@ -7,7 +7,21 @@
 
 import UIKit
 
-var elements: [String] = ["Red", "Blue", "Green", "Yellow", "White", "Black", "Orange", "Pink", "Purple", "Magenta", "Grey", "Lime", "Cyan", "Turqoise", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue", "Blue"]
+class newTimer{
+    
+    var name:String
+    var color:UIColor
+    var duration:Double
+    
+    init(name:String, color:UIColor, duration:Double){
+        self.name = name
+        self.color = color
+        self.duration = duration
+    }
+    
+}
+
+var timers: [newTimer] = [newTimer(name: "My Timer", color: .red, duration: 60)]
 
 var timerGrid:UICollectionView?
 
@@ -24,7 +38,7 @@ class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return elements.count
+        return timers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -33,7 +47,9 @@ class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICol
         
         if let timerCell =  collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? TimerCell {
            
-            timerCell.configure(with: elements[indexPath.row])
+            let timerIndex = timers[indexPath.row]
+            
+            timerCell.configure( name: timerIndex.name, color: timerIndex.color, duration: timerIndex.duration)
             cell = timerCell
             
         }
