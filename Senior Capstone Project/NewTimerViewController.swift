@@ -48,8 +48,6 @@ class NewTimerViewController: UIViewController, UICollectionViewDelegate, UIColl
         return cell
     }
     
-    
-    
     @IBAction func createNewTimer(_ sender: Any) {
         
         newTimerName = timerName.text!

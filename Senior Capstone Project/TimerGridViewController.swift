@@ -21,7 +21,7 @@ class newTimer{
     
 }
 
-var timers: [newTimer] = [newTimer(name: "My Timer", color: .red, duration: 60)]
+var timers: [newTimer] = [newTimer(name: "My Timer", color: .red, duration: 600)]
 
 var timerGrid:UICollectionView?
 
@@ -55,6 +55,10 @@ class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICol
         }
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
     }
     
 }

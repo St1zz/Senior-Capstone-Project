@@ -7,6 +7,8 @@
 
 import UIKit
 
+var timerSelected = newTimer(name: "example", color: .red, duration: 60)
+
 func formatTime(time: Double) -> String{
     
     let hours = time / 3600
@@ -35,12 +37,23 @@ class TimerCell: UICollectionViewCell {
     @IBOutlet var cellCircle: UIImageView!
     @IBOutlet var cellDuration: UILabel!
     
+    var name:String = ""
+    var color:UIColor = .red
+    var duration:Double = 0.0
+    
     func configure(name:String, color:UIColor, duration: Double){
         
         cellTitle.text = name
         cellCircle.tintColor = color
         cellDuration.text = formatTime(time: duration)
         
+        self.name = name
+        self.color = color
+        self.duration = duration
     }
     
+    @IBAction func timerClicked(_ sender: Any) {
+        timerSelected = newTimer(name: self.name, color: self.color, duration: self.duration)
+    }
+
 }
