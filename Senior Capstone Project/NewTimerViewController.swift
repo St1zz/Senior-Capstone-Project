@@ -13,7 +13,7 @@ var newTimerColor:UIColor = .red
 
 class NewTimerViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    let colors:[UIColor] = [.red, .orange, .yellow, .green, .blue, .purple, .black, .white]
+    let colors:[UIColor] = [.red, .orange, .yellow, .green, .blue, .purple, .magenta, .black, .brown, .white]
 
     @IBOutlet var colorPickerCollection: UICollectionView!
     @IBOutlet var timerDuration: UIDatePicker!
@@ -48,16 +48,14 @@ class NewTimerViewController: UIViewController, UICollectionViewDelegate, UIColl
         return cell
     }
     
-    
-    
     @IBAction func createNewTimer(_ sender: Any) {
         
         newTimerName = timerName.text!
         newTimerDuration = timerDuration.countDownDuration
         newTimerColor = selectedColor
         
-        let newTimer = "Rainbow"
-         elements.insert(newTimer, at: 0)
+        let newTimerCell = newTimer(name: newTimerName, color: newTimerColor, duration: newTimerDuration)
+         timers.insert(newTimerCell, at: 0)
          let indexPath = IndexPath(row: 0, section:0)
          timerGrid!.insertItems(at: [indexPath])
         
