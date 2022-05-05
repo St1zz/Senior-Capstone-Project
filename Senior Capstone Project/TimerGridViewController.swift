@@ -49,25 +49,41 @@ class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICol
            
             let timerIndex = timers[indexPath.row]
             
-            timerCell.configure( name: timerIndex.name, color: timerIndex.color, duration: timerIndex.duration)
+            let timerButton = timerCell.configure(name: timerIndex.name, color: timerIndex.color, duration: timerIndex.duration)
             cell = timerCell
+            
+            timerButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+            
+            timerButton.layer.setValue(indexPath.row, forKey: "indexNum")
             
         }
         
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    var timerInfo = timers[0]
+    var goingToTimer = false
+    
+    @objc func buttonAction(sender:UIButton!){
+     
+        let indexNum = sender.layer.value(forKey: "indexNum") as! Int
         
-       // let receiverVC = segue.destination as! TimerViewController
-        
-        print(timerSelected.name)
-        
-       // receiverVC.nameText.text =  timerSelected.name
+        timerInfo = timers[indexNum]
+        goingToTimer = true
+        performSegue(withIdentifier: "timerSegue", sender: self)
         
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if goingToTimer == true{
+            goingToTimer = false
+            let timerSegue = segue.destination as! TimerViewController
+            timerSegue.timerInfo = self.timerInfo
+        }
+    }
+    
 }
+
 /*
  
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

@@ -62,6 +62,27 @@
                                     <outletCollection property="gestureRecognizers" destination="Zcf-S3-KbG" appends="YES" id="cOb-Le-xBk"/>
                                 </connections>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming Soon.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCp-Pj-Zme">
+                                <rect key="frame" x="128" y="528" width="193" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
+                                <color key="textColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.83827431789999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming Soon.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PQe-bM-66C">
+                                <rect key="frame" x="128" y="420" width="193" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
+                                <color key="textColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.83827431789999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming Soon.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nt7-sj-ycJ">
+                                <rect key="frame" x="128" y="312" width="193" height="56"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
+                                <color key="textColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.83827431789999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jv2-jP-ceo"/>
                         <color key="backgroundColor" red="0.47875045510781139" green="0.25278814583352438" blue="0.63343552086088395" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -145,17 +166,8 @@
                                     <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPG-uH-lUE">
-                                <rect key="frame" x="88" y="642" width="239" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Pause">
-                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
-                                </buttonConfiguration>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmg-2S-7Zo">
-                                <rect key="frame" x="88" y="751" width="239" height="57"/>
+                                <rect key="frame" x="88" y="642" width="239" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -168,9 +180,9 @@
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     </view>
                     <connections>
-                        <outlet property="nameText" destination="VZW-Ye-pQE" id="w8z-ZS-Wvc"/>
-                        <outlet property="timerCircle" destination="k0A-Hd-PRP" id="7Zq-Pq-Y8E"/>
-                        <outlet property="timerDisplay" destination="zOC-Xj-sD0" id="ScG-gD-Wek"/>
+                        <outlet property="timeDisplay" destination="zOC-Xj-sD0" id="2wd-4U-Lke"/>
+                        <outlet property="timerCircle" destination="k0A-Hd-PRP" id="DXY-Dz-nNf"/>
+                        <outlet property="timerName" destination="VZW-Ye-pQE" id="pRu-2H-F6y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNW-NR-Jik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -180,7 +192,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-639.13043478260875" y="780.80357142857144"/>
+            <point key="canvasLocation" x="-638" y="781"/>
         </scene>
         <!--Timer Grid View Controller-->
         <scene sceneID="H2H-ax-JeX">
@@ -257,10 +269,6 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain"/>
-                                                    <connections>
-                                                        <action selector="timerClicked:" destination="6hn-WT-BVN" eventType="touchUpInside" id="iBv-hb-gMc"/>
-                                                        <segue destination="OjE-fc-2Fa" kind="showDetail" id="KPs-tJ-eCd"/>
-                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -280,6 +288,7 @@
                                             <outlet property="cellCircle" destination="xKg-Lr-j2g" id="4QN-2B-xMj"/>
                                             <outlet property="cellDuration" destination="Mdx-w0-5Ur" id="MRc-Bv-46J"/>
                                             <outlet property="cellTitle" destination="R3V-ec-WJZ" id="0Vw-lV-VAT"/>
+                                            <outlet property="timerButton" destination="3uU-YZ-XrU" id="rOo-Hz-laT"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -316,6 +325,7 @@
                     </view>
                     <connections>
                         <outlet property="timerCollection" destination="Set-yk-ZUr" id="YVe-Cb-Yoo"/>
+                        <segue destination="OjE-fc-2Fa" kind="showDetail" identifier="timerSegue" id="AwO-yn-Erx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C1H-3k-iGu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -331,7 +341,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="781.47321428571422"/>
+            <point key="canvasLocation" x="19" y="781"/>
         </scene>
         <!--New Timer View Controller-->
         <scene sceneID="3Me-v5-MZq">
@@ -604,7 +614,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="k9X-h7-SXM"/>
+        <segue reference="sg4-1o-8Jg"/>
         <segue reference="9sr-aT-E3W"/>
     </inferredMetricsTieBreakers>
     <resources>
