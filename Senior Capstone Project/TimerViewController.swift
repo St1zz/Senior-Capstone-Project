@@ -14,8 +14,11 @@ class TimerViewController: UIViewController {
     @IBOutlet var timerDisplay: UILabel!
     @IBOutlet var timerCircle: UIImageView!
     
+    var name:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         // Do any additional setup after loading the view.
     }

@@ -58,7 +58,13 @@ class TimerGridViewController: UIViewController, UICollectionViewDelegate, UICol
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        
+       // let receiverVC = segue.destination as! TimerViewController
+        
+        print(timerSelected.name)
+        
+       // receiverVC.nameText.text =  timerSelected.name
+        
     }
     
 }
