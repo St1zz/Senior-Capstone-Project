@@ -150,6 +150,18 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Start" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" highlighted="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jcT-K4-Ckj">
+                                <rect key="frame" x="110" y="580" width="194" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.38496560612175085" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bcR-vm-IAL" appends="YES" id="H6q-7E-4W8"/>
+                                </connections>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zOC-Xj-sD0">
                                 <rect key="frame" x="69" y="329" width="276" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -157,29 +169,25 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bs-dF-XEF">
-                                <rect key="frame" x="88" y="577" width="239" height="57"/>
+                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reset" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" highlighted="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dL0-v0-9yE">
+                                <rect key="frame" x="110" y="697" width="194" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Play">
-                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
-                                </buttonConfiguration>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fmg-2S-7Zo">
-                                <rect key="frame" x="88" y="642" width="239" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Reset">
-                                    <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
-                                </buttonConfiguration>
-                            </button>
+                                <color key="backgroundColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.38496560610000002" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Qiw-4h-FaK" appends="YES" id="8pO-5s-uny"/>
+                                </connections>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="J80-BH-uMj"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
                     </view>
                     <connections>
+                        <outlet property="resetLabel" destination="dL0-v0-9yE" id="Jei-qE-ihp"/>
+                        <outlet property="startLabel" destination="jcT-K4-Ckj" id="vqC-Ji-Gdu"/>
                         <outlet property="timeDisplay" destination="zOC-Xj-sD0" id="2wd-4U-Lke"/>
                         <outlet property="timerCircle" destination="k0A-Hd-PRP" id="DXY-Dz-nNf"/>
                         <outlet property="timerName" destination="VZW-Ye-pQE" id="pRu-2H-F6y"/>
@@ -191,8 +199,18 @@
                         <segue destination="aua-e8-0um" kind="showDetail" id="k9X-h7-SXM"/>
                     </connections>
                 </tapGestureRecognizer>
+                <tapGestureRecognizer id="bcR-vm-IAL" userLabel="startTap">
+                    <connections>
+                        <action selector="startTap:" destination="OjE-fc-2Fa" id="SIY-GP-Wiu"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="Qiw-4h-FaK" userLabel="resetTap">
+                    <connections>
+                        <action selector="resetTap:" destination="OjE-fc-2Fa" id="e98-5F-EaH"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-638" y="781"/>
+            <point key="canvasLocation" x="-639.13043478260875" y="780.80357142857144"/>
         </scene>
         <!--Timer Grid View Controller-->
         <scene sceneID="H2H-ax-JeX">
@@ -614,7 +632,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sg4-1o-8Jg"/>
+        <segue reference="k9X-h7-SXM"/>
         <segue reference="9sr-aT-E3W"/>
     </inferredMetricsTieBreakers>
     <resources>
