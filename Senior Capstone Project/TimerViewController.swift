@@ -91,7 +91,6 @@ class TimerViewController: UIViewController {
         }else{
             timer.invalidate()
         }
-        
     }
     
     @IBAction func resetTap(_ sender: Any) {
@@ -99,6 +98,9 @@ class TimerViewController: UIViewController {
         let time = HrsMinsSecs(seconds: Int(firstCount))
         let timeString = formatTimeSeconds(hours: time.0, minutes: time.1, seconds: time.2)
         timeDisplay.text = timeString
+        timerPlaying = false
+        startLabel.text = "Start"
+        count = firstCount
     }
     /*
     // MARK: - Navigation
