@@ -10,27 +10,35 @@ import UIKit
 class newToDo{
     
     var title:String
-    var date:String
-    var description: String
+    //var date:String
     
-    init(title:String, date:String, description:String){
+    init(title:String){
         self.title = title
-        self.date = date
-        self.description = description
+        
     }
     
 }
 
-var toDoLists:[newToDo] = [newToDo(title: "Dont forget to sing and dance", date: <#T##String#>, description: <#T##String#>) ]
+var toDoLists:[newToDo] = [newToDo(title: "Dont forget to sing and dance")]
 
 class ToDoTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return toDoLists.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        var cell = UITableViewCell()
+        
+        if let taskCell = tableView.dequeueReusableCell(withIdentifier: "toDoCell", for: indexPath) as? TaskCell {
+            
+            let taskIndex = toDoLists[indexPath.row]
+            
+            taskCell.configure(task: taskIndex.title)
+            cell = taskCell
+        }
+            
+        return cell
     }
     
 

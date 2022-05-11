@@ -28,6 +28,7 @@
 		A9A549F32818243000970CCE /* TimerGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A549F22818243000970CCE /* TimerGridViewController.swift */; };
 		A9A549F52818296800970CCE /* TimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A549F42818296800970CCE /* TimerCell.swift */; };
 		A9C31F58282ADCC100D23671 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C31F57282ADCC100D23671 /* ToDoTableViewController.swift */; };
+		A9C31F5C282BEAD400D23671 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C31F5B282BEAD400D23671 /* TaskCell.swift */; };
 		A9E39FBF27E4C1DA005FB89B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A9E39FBE27E4C1DA005FB89B /* AVFoundation.framework */; };
 		A9E3A03527EDF3DD005FB89B /* MusicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9E3A03427EDF3DD005FB89B /* MusicViewController.swift */; };
 		A9E3A03627EDF7AE005FB89B /* CoffeeJazz.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A920DA3A27D8ECC800342EB0 /* CoffeeJazz.m4a */; };
@@ -58,6 +59,7 @@
 		A9A549F22818243000970CCE /* TimerGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGridViewController.swift; sourceTree = "<group>"; };
 		A9A549F42818296800970CCE /* TimerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
 		A9C31F57282ADCC100D23671 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
+		A9C31F5B282BEAD400D23671 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		A9E39FBE27E4C1DA005FB89B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		A9E3A03427EDF3DD005FB89B /* MusicViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 				A924759F28202B8400B89EA1 /* ColorCell.swift */,
 				A92C1DC4282423DB00B18D0B /* TimerViewController.swift */,
 				A9C31F57282ADCC100D23671 /* ToDoTableViewController.swift */,
+				A9C31F5B282BEAD400D23671 /* TaskCell.swift */,
 			);
 			path = "Senior Capstone Project";
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				A9A549F52818296800970CCE /* TimerCell.swift in Sources */,
 				A924759B28201D2B00B89EA1 /* NewTimerViewController.swift in Sources */,
 				A92475A028202B8400B89EA1 /* ColorCell.swift in Sources */,
+				A9C31F5C282BEAD400D23671 /* TaskCell.swift in Sources */,
 				A9C31F58282ADCC100D23671 /* ToDoTableViewController.swift in Sources */,
 				A94193F327AAC2BD0049248E /* ViewController.swift in Sources */,
 				A9E3A03527EDF3DD005FB89B /* MusicViewController.swift in Sources */,
