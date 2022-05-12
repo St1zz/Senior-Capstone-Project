@@ -22,7 +22,7 @@ class NewToDoViewController: UIViewController {
         
        let newToDoText = toDoText.text!
       
-        let newToDoCell = newToDo(title: newToDoText, datePicker: toDoCalendar.calendar)
+        let newToDoCell = newToDo(title: newToDoText, datePicker: toDoCalendar)
         
          toDoLists.insert(newToDoCell, at: 0)
          let indexPath = IndexPath(row: 0, section:0)

@@ -10,7 +10,10 @@ import UIKit
 func formatDate(datePicker:UIDatePicker) -> String{
     
     let formatter = DateFormatter()
-    formatter.calendar = date.cal
+    formatter.dateStyle = .short
+    formatter.timeStyle = .short
+    
+    return formatter.string(from: datePicker.date)
     
 }
 
@@ -19,7 +22,7 @@ class newToDo{
     var title:String
     var date:String
     
-    init(title:String, datePicker:NSDate){
+    init(title:String, datePicker:UIDatePicker){
         self.title = title
         self.date = formatDate(datePicker: datePicker)
     }
@@ -42,7 +45,7 @@ class ToDoTableViewController: UIViewController, UITableViewDelegate, UITableVie
             
             let taskIndex = toDoLists[indexPath.row]
             
-            taskCell.configure(task: taskIndex.title)
+            taskCell.configure(task: taskIndex.title, dateTxt: taskIndex.date)
             cell = taskCell
         }
             

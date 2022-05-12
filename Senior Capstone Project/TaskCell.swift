@@ -14,8 +14,9 @@ class TaskCell: UITableViewCell {
     @IBOutlet var checkBox: UIImageView!
     var taskDone = false
     
-    func configure(task:String){
+    func configure(task:String, dateTxt:String){
         taskLabel.text = task
+        taskDate.text = dateTxt
     }
     
     @IBAction func checkButton(_ sender: Any) {
@@ -28,8 +29,5 @@ class TaskCell: UITableViewCell {
             checkBox.image = UIImage(systemName: "square")
         }
     }
-    
-    
-    
     
 }
