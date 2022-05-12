@@ -34,6 +34,15 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="414" height="39"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4O-3A-K7A">
+                                                            <rect key="frame" x="0.0" y="-10.5" width="414" height="59"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain"/>
+                                                            <connections>
+                                                                <action selector="checkButton:" destination="o11-xI-Vqa" eventType="touchUpInside" id="LNh-WL-1Zi"/>
+                                                            </connections>
+                                                        </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember to dance and sing" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NhK-1o-F0P">
                                                             <rect key="frame" x="52" y="8" width="245" height="39"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -55,28 +64,18 @@
                                                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <gestureRecognizers/>
                                                         </imageView>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4TK-WI-4HW" userLabel="InfoButton">
-                                                            <rect key="frame" x="0.0" y="0.0" width="406" height="50"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <state key="normal" title="Button"/>
-                                                            <buttonConfiguration key="configuration" style="plain"/>
-                                                            <connections>
-                                                                <action selector="taskDone:" destination="o11-xI-Vqa" eventType="touchUpInside" id="gLi-Zh-mnq"/>
-                                                            </connections>
-                                                        </button>
                                                     </subviews>
                                                     <viewLayoutGuide key="safeArea" id="58i-OH-97t"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <gestureRecognizers/>
                                                 </view>
                                             </subviews>
-                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.29550585209928604" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.32537033380000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <gestureRecognizers/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="checkBox" destination="Dy2-s6-mbM" id="hxQ-TI-0Q2"/>
-                                            <outlet property="checkButton" destination="4TK-WI-4HW" id="OGn-WT-Rrd"/>
                                             <outlet property="taskDate" destination="5Pv-6X-pHy" id="ieh-7A-xhA"/>
                                             <outlet property="taskLabel" destination="NhK-1o-F0P" id="IF6-S4-7j7"/>
                                         </connections>
@@ -123,18 +122,14 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="-627.45535714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--New To Do View Controller-->
         <scene sceneID="qPy-N2-X8q">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="FEi-X3-Bf7" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="FEi-X3-Bf7" customClass="NewToDoViewController" customModule="Senior_Capstone_Project" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vKk-ck-bJo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="Fpa-YR-Ho4">
-                                <rect key="frame" x="39" y="319" width="337" height="351"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="knT-9x-zHv">
                                 <rect key="frame" x="88" y="719" width="239" height="57"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -143,6 +138,10 @@
                                 <buttonConfiguration key="configuration" style="tinted" title="Create">
                                     <fontDescription key="titleFontDescription" name="ArialRoundedMTBold" family="Arial Rounded MT Bold" pointSize="30"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="createTap:" destination="FEi-X3-Bf7" eventType="touchUpInside" id="sbe-WW-r9X"/>
+                                    <segue destination="8WG-8A-hOJ" kind="showDetail" id="iIm-xX-tgf"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Task To Do" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kF2-PN-XGT">
                                 <rect key="frame" x="39" y="228" width="337" height="34"/>
@@ -174,10 +173,18 @@
                                     <outletCollection property="gestureRecognizers" destination="mP3-Gr-rgR" appends="YES" id="wjg-D1-xrs"/>
                                 </connections>
                             </imageView>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="Fpa-YR-Ho4">
+                                <rect key="frame" x="39" y="291" width="337" height="351"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NZY-CM-0d6"/>
                         <color key="backgroundColor" red="0.77776874157053" green="0.51249092188959966" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <connections>
+                        <outlet property="toDoCalendar" destination="Fpa-YR-Ho4" id="d0B-LW-Ht7"/>
+                        <outlet property="toDoText" destination="kF2-PN-XGT" id="cCB-d2-6Dg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PCo-xX-FJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="mP3-Gr-rgR" userLabel="Back Tap">
@@ -806,9 +813,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="2LF-KE-ASU"/>
         <segue reference="sg4-1o-8Jg"/>
         <segue reference="RRB-bx-WS0"/>
-        <segue reference="Wn6-3j-1Se"/>
+        <segue reference="iIm-xX-tgf"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AddButton" width="1920" height="1920"/>

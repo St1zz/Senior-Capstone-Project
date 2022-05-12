@@ -7,19 +7,27 @@
 
 import UIKit
 
+func formatDate(datePicker:UIDatePicker) -> String{
+    
+    let formatter = DateFormatter()
+    formatter.calendar = date.cal
+    
+}
+
 class newToDo{
     
     var title:String
-    //var date:String
+    var date:String
     
-    init(title:String){
+    init(title:String, datePicker:NSDate){
         self.title = title
-        
+        self.date = formatDate(datePicker: datePicker)
     }
     
 }
 
-var toDoLists:[newToDo] = [newToDo(title: "Dont forget to sing and dance")]
+var toDoLists:[newToDo] = []
+var toDoTableView:UITableView?
 
 class ToDoTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -43,12 +51,13 @@ class ToDoTableViewController: UIViewController, UITableViewDelegate, UITableVie
     
 
     @IBOutlet var toDoTable: UITableView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         toDoTable.delegate = self
         toDoTable.dataSource = self
+        toDoTableView = toDoTable
         // Do any additional setup after loading the view.
     }
     

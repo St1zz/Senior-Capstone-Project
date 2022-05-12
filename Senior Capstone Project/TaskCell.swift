@@ -11,7 +11,6 @@ class TaskCell: UITableViewCell {
 
     @IBOutlet var taskLabel: UILabel!
     @IBOutlet var taskDate: UILabel!
-    @IBOutlet var checkButton: UIButton!
     @IBOutlet var checkBox: UIImageView!
     var taskDone = false
     
@@ -19,8 +18,8 @@ class TaskCell: UITableViewCell {
         taskLabel.text = task
     }
     
-    @IBAction func taskDone(_ sender: Any) {
-        
+    @IBAction func checkButton(_ sender: Any) {
+        print("tapped")
         if taskDone == false{
             taskDone = true
             checkBox.image = UIImage(systemName: "checkmark.square")
@@ -28,8 +27,9 @@ class TaskCell: UITableViewCell {
             taskDone = false
             checkBox.image = UIImage(systemName: "square")
         }
-        
     }
+    
+    
     
     
 }
