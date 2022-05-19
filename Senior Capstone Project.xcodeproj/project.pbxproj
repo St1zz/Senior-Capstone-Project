@@ -27,6 +27,7 @@
 		A9A549EF27FC738300970CCE /* Phoenix.m4a in Resources */ = {isa = PBXBuildFile; fileRef = A9A549EE27FC738300970CCE /* Phoenix.m4a */; };
 		A9A549F32818243000970CCE /* TimerGridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A549F22818243000970CCE /* TimerGridViewController.swift */; };
 		A9A549F52818296800970CCE /* TimerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9A549F42818296800970CCE /* TimerCell.swift */; };
+		A9C234E828367B1700B24A27 /* FocusModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C234E728367B1700B24A27 /* FocusModeViewController.swift */; };
 		A9C31F58282ADCC100D23671 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C31F57282ADCC100D23671 /* ToDoTableViewController.swift */; };
 		A9C31F5C282BEAD400D23671 /* TaskCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C31F5B282BEAD400D23671 /* TaskCell.swift */; };
 		A9C31F5E282D365C00D23671 /* NewToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9C31F5D282D365B00D23671 /* NewToDoViewController.swift */; };
@@ -59,6 +60,7 @@
 		A9A549EE27FC738300970CCE /* Phoenix.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = Phoenix.m4a; sourceTree = "<group>"; };
 		A9A549F22818243000970CCE /* TimerGridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerGridViewController.swift; sourceTree = "<group>"; };
 		A9A549F42818296800970CCE /* TimerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerCell.swift; sourceTree = "<group>"; };
+		A9C234E728367B1700B24A27 /* FocusModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FocusModeViewController.swift; sourceTree = "<group>"; };
 		A9C31F57282ADCC100D23671 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		A9C31F5B282BEAD400D23671 /* TaskCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskCell.swift; sourceTree = "<group>"; };
 		A9C31F5D282D365B00D23671 /* NewToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				A9C31F57282ADCC100D23671 /* ToDoTableViewController.swift */,
 				A9C31F5B282BEAD400D23671 /* TaskCell.swift */,
 				A9C31F5D282D365B00D23671 /* NewToDoViewController.swift */,
+				A9C234E728367B1700B24A27 /* FocusModeViewController.swift */,
 			);
 			path = "Senior Capstone Project";
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 			files = (
 				A92C1DC5282423DB00B18D0B /* TimerViewController.swift in Sources */,
 				A9A549F52818296800970CCE /* TimerCell.swift in Sources */,
+				A9C234E828367B1700B24A27 /* FocusModeViewController.swift in Sources */,
 				A924759B28201D2B00B89EA1 /* NewTimerViewController.swift in Sources */,
 				A92475A028202B8400B89EA1 /* ColorCell.swift in Sources */,
 				A9C31F5C282BEAD400D23671 /* TaskCell.swift in Sources */,

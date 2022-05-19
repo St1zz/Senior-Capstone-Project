@@ -51,7 +51,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="11/25/22" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" translatesAutoresizingMaskIntoConstraints="NO" id="5Pv-6X-pHy">
-                                                            <rect key="frame" x="51" y="32" width="332" height="19"/>
+                                                            <rect key="frame" x="51" y="32" width="332" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -195,6 +195,91 @@
             </objects>
             <point key="canvasLocation" x="669.56521739130437" y="-627.45535714285711"/>
         </scene>
+        <!--Focus Mode View Controller-->
+        <scene sceneID="7pm-8d-DyH">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Kb5-sS-B0b" customClass="FocusModeViewController" customModule="Senior_Capstone_Project" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wZZ-Eb-08E">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="EmptyCircle" translatesAutoresizingMaskIntoConstraints="NO" id="RCw-dj-i5T">
+                                <rect key="frame" x="33" y="190" width="349" height="349"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sun.max.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="thn-sP-9cF">
+                                <rect key="frame" x="94" y="251" width="227" height="227"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AZD-UW-LDC" appends="YES" id="FsT-si-NQz"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="00:00:00" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yMw-Xj-a3Q">
+                                <rect key="frame" x="69" y="561" width="276" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Today: 00:00:00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hvL-BW-IkK">
+                                <rect key="frame" x="20" y="707" width="374" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="This Week: 00:00:00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EMn-8W-KKH">
+                                <rect key="frame" x="20" y="758" width="374" height="38"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total: 00:00:00" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yB1-oC-hAo">
+                                <rect key="frame" x="20" y="804" width="374" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Home Icon" translatesAutoresizingMaskIntoConstraints="NO" id="46A-lo-hzP">
+                                <rect key="frame" x="20" y="44" width="52" height="52"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="dzb-g0-QwN" appends="YES" id="c07-uS-6Kj"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Focus Mode" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eof-k5-qGp">
+                                <rect key="frame" x="48" y="104" width="318" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="N82-Gi-8Pa"/>
+                        <color key="backgroundColor" red="0.88035839770000002" green="0.4731544593" blue="0.96841138599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ayB-Ig-bcD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="dzb-g0-QwN" userLabel="Home Tap">
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="showDetail" id="XKQ-jz-lIW"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="AZD-UW-LDC" userLabel="Focus Tap">
+                    <connections>
+                        <action selector="focusTap:" destination="Kb5-sS-B0b" id="ksq-ee-Apg"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-833.33333333333337" y="83.705357142857139"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -296,6 +381,7 @@
                 <tapGestureRecognizer id="TQW-XN-9Eh" userLabel="FocusMode Tap">
                     <connections>
                         <action selector="focusModeTapped:" destination="BYZ-38-t0r" id="8I2-b2-Rrh"/>
+                        <segue destination="Kb5-sS-B0b" kind="showDetail" id="5UX-h5-C67"/>
                     </connections>
                 </tapGestureRecognizer>
                 <tapGestureRecognizer id="Zcf-S3-KbG" userLabel="Calendar Tap">
@@ -813,10 +899,9 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="2LF-KE-ASU"/>
         <segue reference="sg4-1o-8Jg"/>
-        <segue reference="RRB-bx-WS0"/>
-        <segue reference="iIm-xX-tgf"/>
+        <segue reference="XKQ-jz-lIW"/>
+        <segue reference="Wn6-3j-1Se"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="AddButton" width="1920" height="1920"/>
@@ -834,6 +919,7 @@
         <image name="city silhouette" width="593" height="143"/>
         <image name="play.circle" catalog="system" width="128" height="121"/>
         <image name="square" catalog="system" width="128" height="114"/>
+        <image name="sun.max.fill" catalog="system" width="128" height="124"/>
         <systemColor name="systemPurpleColor">
             <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
