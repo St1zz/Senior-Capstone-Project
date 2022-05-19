@@ -64,7 +64,6 @@ class FocusModeViewController: UIViewController {
             let overallTimeString = formatTimeSeconds(hours: allTime.0, minutes: allTime.1, seconds: allTime.2)
             overallTimeLabel.text = "Overall: " + overallTimeString
             
-            
         }
         else{
             count = 0
