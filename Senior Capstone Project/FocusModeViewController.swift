@@ -9,6 +9,9 @@ import UIKit
 
 class FocusModeViewController: UIViewController {
 
+    @IBOutlet var focusImage: UIImageView!
+    @IBOutlet var circleImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -16,9 +19,13 @@ class FocusModeViewController: UIViewController {
     }
     
     @IBAction func focusTap(_ sender: Any) {
-        UIView.animate(withDuration: 3.0){
-            self.view.backgroundColor = #colorLiteral(red: 0.4068264961, green: 0.1091894284, blue: 1, alpha: 1)
+        UIView.animate(withDuration: 0.75){
+            self.view.backgroundColor = #colorLiteral(red: 0.2674478292, green: 0.07376533002, blue: 0.674910605, alpha: 1)
+            self.circleImage.tintColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
+            self.focusImage.tintColor = #colorLiteral(red: 1, green: 0.8, blue: 0, alpha: 1)
         }
+        focusImage.image = UIImage(systemName: "moon.fill")
+        
     }
     
     /*
