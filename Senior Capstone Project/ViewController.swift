@@ -15,9 +15,6 @@ class ViewController: UIViewController {
 
     }
     
-    @IBAction func homeTapped(_ sender: Any) {
-        print("Home Tapped")
-    }
     @IBAction func musicTapped(_ sender: Any) {
         print("Music Tapped")
     }

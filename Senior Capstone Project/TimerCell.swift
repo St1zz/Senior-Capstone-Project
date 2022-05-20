@@ -7,53 +7,21 @@
 
 import UIKit
 
-var timerSelected = newTimer(name: "example", color: .red, duration: 60)
-
-func formatTime(time: Double) -> String{
-    
-    let hours = time / 3600
-    let hrRemain = hours.truncatingRemainder(dividingBy: 1)
-    let minutes = hrRemain * 60
-    
-    let timeFormatter = NumberFormatter()
-    timeFormatter.minimumIntegerDigits = 2
-    timeFormatter.minimumFractionDigits = 0
-    timeFormatter.roundingMode = .down
-    
-    guard let hrString = timeFormatter.string(from: NSNumber(value: hours)), let minString = timeFormatter.string(from: NSNumber(value: minutes))
-    else{
-        return "00:00"
-    }
-    
-    let clockTime = "\(hrString):\(minString):00"
-    
-    return clockTime
-    
-}
-
 class TimerCell: UICollectionViewCell {
     
     @IBOutlet var cellTitle: UILabel!
     @IBOutlet var cellCircle: UIImageView!
     @IBOutlet var cellDuration: UILabel!
+    @IBOutlet var timerButton: UIButton!
     
-    var name:String = ""
-    var color:UIColor = .red
-    var duration:Double = 0.0
-    
-    func configure(name:String, color:UIColor, duration: Double){
+    func configure(name:String, color:UIColor, duration: Double) -> UIButton{
         
         cellTitle.text = name
         cellCircle.tintColor = color
-        cellDuration.text = formatTime(time: duration)
+        let newDuration = HrsMinsSecs(seconds: Int(duration))
+        cellDuration.text = formatTimeSeconds(hours: newDuration.0, minutes: newDuration.1, seconds: newDuration.2)
         
-        self.name = name
-        self.color = color
-        self.duration = duration
+        return timerButton
     }
     
-    @IBAction func timerClicked(_ sender: Any) {
-        timerSelected = newTimer(name: self.name, color: self.color, duration: self.duration)
-    }
-
 }
