@@ -291,7 +291,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-793" y="84"/>
+            <point key="canvasLocation" x="-794.20289855072474" y="83.705357142857139"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -315,15 +315,6 @@
                                     <outletCollection property="gestureRecognizers" destination="TQW-XN-9Eh" appends="YES" id="5an-Hd-z7e"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ChecklistIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wNM-iU-qSs">
-                                <rect key="frame" x="20" y="506" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="5T6-Mm-uba" appends="YES" id="Ur8-qz-hRb"/>
-                                </connections>
-                            </imageView>
                             <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MusicIcon" translatesAutoresizingMaskIntoConstraints="NO" id="aZf-Nc-VoD">
                                 <rect key="frame" x="20" y="182" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -333,31 +324,6 @@
                                     <outletCollection property="gestureRecognizers" destination="fp9-av-n7U" appends="YES" id="Ovf-Re-QV3"/>
                                 </connections>
                             </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Timer Icon" translatesAutoresizingMaskIntoConstraints="NO" id="iXS-5h-jEL">
-                                <rect key="frame" x="20" y="614" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.97603005395236464" green="1" blue="0.95930211783233998" alpha="0.6475363219810637" colorSpace="custom" customColorSpace="displayP3"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="qNC-iL-Lgk" appends="YES" id="A08-WL-i1c"/>
-                                </connections>
-                            </imageView>
-                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Calendar Icon" translatesAutoresizingMaskIntoConstraints="NO" id="ltg-GH-e4O">
-                                <rect key="frame" x="20" y="398" width="100" height="100"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" red="0.97603005395236464" green="1" blue="0.95930211783233998" alpha="0.6475363219810637" colorSpace="custom" customColorSpace="displayP3"/>
-                                <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="Zcf-S3-KbG" appends="YES" id="cOb-Le-xBk"/>
-                                </connections>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming Soon.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PQe-bM-66C">
-                                <rect key="frame" x="128" y="428" width="157" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
-                                <color key="textColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.83827431789999995" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Music Stations" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KZs-fD-k2o">
                                 <rect key="frame" x="128" y="216" width="157" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -372,15 +338,49 @@
                                 <color key="textColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.83827431789999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ChecklistIcon" translatesAutoresizingMaskIntoConstraints="NO" id="wNM-iU-qSs">
+                                <rect key="frame" x="20" y="398" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.647536322" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="5T6-Mm-uba" appends="YES" id="Ur8-qz-hRb"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Timer Icon" translatesAutoresizingMaskIntoConstraints="NO" id="iXS-5h-jEL">
+                                <rect key="frame" x="20" y="506" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.97603005395236464" green="1" blue="0.95930211783233998" alpha="0.6475363219810637" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="qNC-iL-Lgk" appends="YES" id="A08-WL-i1c"/>
+                                </connections>
+                            </imageView>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Calendar Icon" translatesAutoresizingMaskIntoConstraints="NO" id="ltg-GH-e4O">
+                                <rect key="frame" x="20" y="614" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.9703323393507064" green="1" blue="0.95957739582727786" alpha="0.6475363219810637" colorSpace="custom" customColorSpace="displayP3"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Zcf-S3-KbG" appends="YES" id="cOb-Le-xBk"/>
+                                </connections>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coming Soon.." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PQe-bM-66C">
+                                <rect key="frame" x="128" y="644" width="157" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
+                                <color key="textColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.83827431789999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To-Do" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1HN-m8-scf">
-                                <rect key="frame" x="128" y="541" width="174" height="31"/>
+                                <rect key="frame" x="128" y="433" width="174" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
                                 <color key="textColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.83827431789999995" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Timers" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tGh-A0-tgA">
-                                <rect key="frame" x="128" y="649" width="157" height="31"/>
+                                <rect key="frame" x="128" y="541" width="157" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="31"/>
                                 <color key="textColor" red="0.97603005399999998" green="1" blue="0.95930211779999996" alpha="0.83827431789999995" colorSpace="custom" customColorSpace="displayP3"/>
