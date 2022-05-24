@@ -25,7 +25,7 @@ class FocusModeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         let todayTime = HrsMinsSecs(seconds: Int(count))
         let todayTimeString = formatTimeSeconds(hours: todayTime.0, minutes: todayTime.1, seconds: todayTime.2)
